@@ -37,8 +37,8 @@ def read_message(username, message_id):
 
 @app.on_message(filters.command("start"))
 async def start(client, message):
-    await message.reply_text("👋 Welcome to Classplus Token Bot!
-Use /gettoken to begin.")
+    await message.reply_text("👋 Welcome to Classplus Token Bot!\nUse /gettoken to begin.")
+
 
 
 @app.on_message(filters.command("gettoken"))
