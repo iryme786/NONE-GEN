@@ -1,5 +1,3 @@
-
-
 from pyrogram import Client, filters
 import requests
 import random
@@ -22,7 +20,7 @@ def get_messages(username):
     try:
         resp = requests.get(f"https://www.1secmail.com/api/v1/?action=getMessages&login={username}&domain=1secmail.com")
         return resp.json()
-    except Exception as e:
+    except Exception:
         return []
 
 
@@ -40,13 +38,12 @@ async def start(client, message):
     await message.reply_text("👋 Welcome to Classplus Token Bot!\nUse /gettoken to begin.")
 
 
-
 @app.on_message(filters.command("gettoken"))
 async def get_token(client, message):
     name, temp_email = generate_temp_email()
-    await message.reply_text(f"📨 Use this email to login on Classplus: `{temp_email}`
-
-⏳ Waiting for OTP...")
+    await message.reply_text(
+        f"📨 Use this email to login on Classplus: `{temp_email}`\n\n⏳ Waiting for OTP..."
+    )
 
     otp = None
     for _ in range(30):  # wait ~60 sec max
@@ -64,11 +61,8 @@ async def get_token(client, message):
         await message.reply_text("❌ OTP not received. Try again.")
         return
 
-    await message.reply_text(f"✅ OTP received: `{otp}`
+    await message.reply_text(f"✅ OTP received: `{otp}`\n\n⏳ Generating token...")
 
-⏳ Generating token...")
-
-    # Send OTP to Classplus and extract token
     payload = {
         "deviceId": ''.join(random.choices(string.ascii_lowercase + string.digits, k=16)),
         "otp": otp,
@@ -85,9 +79,7 @@ async def get_token(client, message):
         data = res.json()
         token = data.get("data", {}).get("token")
         if token:
-            await message.reply_text(f"🔐 Your Token:
-
-`{token}`")
+            await message.reply_text(f"🔐 Your Token:\n\n`{token}`")
         else:
             await message.reply_text("❌ Token not found. OTP may be invalid or expired.")
     except Exception as e:
