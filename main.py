@@ -64,6 +64,3 @@ def run():
 
 threading.Thread(target=run).start()
 uvicorn.run(web, host="0.0.0.0", port=10000)
-
-
----
