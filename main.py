@@ -6,7 +6,7 @@ import time
 
 API_ID = 21601817  # Replace with your API_ID
 API_HASH = "8d0fe8b5ae8149455681681253b2ef17"
-BOT_TOKEN = ""
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 app = Client("classplus_token_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
