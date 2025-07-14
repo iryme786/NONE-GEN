@@ -2,7 +2,7 @@ from pyrogram import Client, filters from pyrogram.types import Message import r
 
 Telegram Config
 
-API_ID = 21601817 API_HASH = "8d0fe8b5ae8149455681681253b2ef17" BOT_TOKEN = "REPLACE_WITH_YOUR_BOT_TOKEN"
+API_ID = 21601817 API_HASH = "8d0fe8b5ae8149455681681253b2ef17" BOT_TOKEN = "8159627489:AAELW-QwJTInrSd55f5vZQSJvjzZz7zVvkg"
 
 app = Client("classplus_manual_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN) user_state = {}
 
