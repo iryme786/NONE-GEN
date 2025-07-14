@@ -8,7 +8,7 @@ import requests, string, random
 # Telegram Bot Config
 API_ID = 21601817
 API_HASH = "8d0fe8b5ae8149455681681253b2ef17"
-BOT_TOKEN = "YOUR_BOT_TOKEN"
+BOT_TOKEN = "8159627489:AAELW-QwJTInrSd55f5vZQSJvjzZz7zVvkg"
 
 bot = Client("classplus_token_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 web = FastAPI()
