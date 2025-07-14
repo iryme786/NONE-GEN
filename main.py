@@ -10,9 +10,9 @@ import time
 import re
 
 # Your Telegram bot credentials
-API_ID = 21601817
-API_HASH = "8d0fe8b5ae8149455681681253b2ef17"
-BOT_TOKEN = "8159627489:AAELW-QwJTInrSd55f5vZQSJvjzZz7zVvkg"  # ← यहाँ अपना Bot Token डालो
+API_ID = "23147459"
+API_HASH = "7ea3e357441507277e33bd1f7c6d8847"
+BOT_TOKEN = ""  # ← यहाँ अपना Bot Token डालो
 
 bot = Client("classplus_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 web = FastAPI()
