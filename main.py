@@ -1,4 +1,11 @@
-from pyrogram import Client, filters from pyrogram.types import Message import requests, random, string, threading from fastapi import FastAPI import uvicorn
+from pyrogram import Client, filters
+from pyrogram.types import Message
+import requests
+import random
+import string
+import threading
+from fastapi import FastAPI
+import uvicorn
 
 Telegram Config
 
